@@ -45,7 +45,6 @@
 		$trial_number = $data['contact_number'];
 		$name = $data['name'];
 		$number = '0'.$trial_number;
-		
 		$msg = "Hi $name! this is Skippy, your Reservation ID is $id. You may look up your order online. \n \n";
 		$api = "TR-COMPA075847_6LNYN";
 		$apipass= "8cn%&a}d}x";

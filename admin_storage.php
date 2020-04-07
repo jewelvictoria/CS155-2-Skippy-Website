@@ -52,7 +52,8 @@
 					<option value="Medium">Medium</option>
 					<option value="Large">Large</option>
 		</select><br>
-		<input type="text" name="add_quantity" placeholder="Input Quantity" size="17" minlength="1" maxlength="3"><br><br>
+		<input type="text" name="input_quantity" placeholder="Input Quantity" size="17" minlength="1" maxlength="3">
+		<div id="num_error"></div><br><br>
 		<input type="submit" class="update_button" name="update" value="Add Storage Count" onclick="check_update(this.form)">
 	</form>
 	<br><br>
@@ -69,7 +70,8 @@
 					<option value="Medium">Medium</option>
 					<option value="Large">Large</option>
 		</select><br>
-		<input type="text" name="subtract_quantity" placeholder="Input Quantity" size="17" minlength="1" maxlength="3"><br><br>
+		<input type="text" name="input_quantity" placeholder="Input Quantity" size="17" minlength="1" maxlength="3">
+		<div id="num_error"></div><br><br>
 		<input type="submit" class="delete_button" name="update" value="Deduct Storage Count" onclick="check_update(this.form)">
 	</form>
 	
@@ -80,12 +82,53 @@
 
 <script language="javascript">
             function check_update(form) { 
-                    window.open('AdminReport.php',"_self")
+                    window.open('admin_storage.php',"_self")
             }
 			function check_delete(form) {
-                    window.open('AdminReport.php',"_self")
+                    window.open('admin_storage.php',"_self")
                     alert("Successfully Deleted!")
             }
+			
+			//GET ALL INPUT TEXT OBJECTS
+			var input_quantity = document.forms["vform"]["input_quantity"];
+			var num = /^[0-9]+$/;
+			
+			//GET ALL ERROR DISPLAY OBJECTS
+			var num_error = document.getElementById("num_error");
+			
+			// SETTING ALL EVENT LISTENERS
+			input_quantity.addEventListener('blur', numVerify, true);
+			
+			// function validation
+			function Validate() {
+			  if (input_quantity.value == "") {
+				input_quantity.style.border = "1px solid red";
+				document.getElementById('num_error').style.color = "red";
+				num_error.textContent = "*number input is required";
+				input_quantity.focus();
+				return false;
+			  }
+			  if(input_quantity.value.match(num)){
+				  window.open('admin_storage.php',"_self")
+				  alert("Successfully Registered!")
+			  }
+			  else{
+				  input_quantity.style.border = "1px solid red";
+				  document.getElementById('num_error').style.color = "red";
+				  num_error.textContent = "*All inputs should be in number/s";
+				  input_quantity.focus();
+				  return false;
+			  }
+			}
+			
+			//EVENT HANDLER FUNCTIONS
+			function numVerify(){
+				if (input_quantity.value != ""){
+					input_quantity.style.border = "1px solid #5E6E66";
+					num_error.innerHTML = "";
+					return true;
+				}
+			}
 	</script>	
 	
 <br><br><br>
