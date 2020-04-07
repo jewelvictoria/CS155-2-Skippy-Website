@@ -35,21 +35,24 @@
 <br>
 <center>
 	
-	<form action="button_update_bought.php" method="post" >
-	<input type="submit" class="update_button" name="update" value="Update to Bought" onclick="check_update(this.form)"><br>	
+	<form action="button_update_bought.php" method="post" onsubmit="return ValidateB()" name="vformB">
+	<input type="submit" class="update_button" name="update" value="Update to Bought"><br>	
 	<input type="text" name="update_bought" placeholder="Input ID" size="4" minlength="1" maxlength="15">
+	<div id="update_error"></div></center>
 	</form>
 	<br>
 	
-	<form action="button_update_cancelled.php" method="post">
-	<input type="submit" class="update_button" name="update" value="Update to Cancelled" onclick="check_update(this.form)"><br>
+	<form action="button_update_cancelled.php" method="post" onsubmit="return ValidateC()" name="vformC">
+	<input type="submit" class="update_button" name="update" value="Update to Cancelled"><br>
 	<input type="text" name="update_cancelled" placeholder="Input ID" size="4" minlength="1" maxlength="15">
+	<div id="cancel_error"></div></center>
 	</form>
 	<br>
 	
-	<form action="button_delete_order.php" method="post">
-	<input type="submit" class="delete_button" name="update" value="Delete an Order" onclick="check_delete(this.form)"><br>
+	<form action="button_delete_order.php" method="post" onsubmit="return ValidateO()" name="vformO">
+	<input type="submit" class="delete_button" name="update" value="Delete an Order"><br>
 	<input type="text" name="delete_order" placeholder="Input ID" size="4" minlength="1" maxlength="15">
+	<div id="delete_error"></div></center>
 	</form>
 	<br>
 	
@@ -59,10 +62,106 @@
 	
 </center>
 
-<script language="javascript">
-            function check_update(form) { 
-                    window.open('admin_report.php',"_self")
-            }
+	<script type="text/javascript">
+			//GET ALL INPUT TEXT OBJECTS
+			var update_bought = document.forms["vformB"]["update_bought"];
+			var update_cancelled = document.forms["vformC"]["update_cancelled"];
+			var delete_order = document.forms["vformO"]["delete_order"];
+			var num = /^[0-9]+$/;
+			
+			//GET ALL ERROR DISPLAY OBJECTS
+			var update_error = document.getElementById("update_error");
+			var cancel_error = document.getElementById("cancel_error");
+			var delete_error = document.getElementById("delete_error");
+			
+			// SETTING ALL EVENT LISTENERS
+			update_bought.addEventListener('blur', updateVerify, true);
+			update_cancelled.addEventListener('blur', cancelVerify, true);
+			delete_order.addEventListener('blur', deleteVerify, true);
+			
+			// function validation
+			function ValidateB() {
+			  if (update_bought.value == "") {
+				update_bought.style.border = "1px solid red";
+				document.getElementById('update_error').style.color = "red";
+				update_error.textContent = "*Please input the reservation ID.";
+				update_bought.focus();
+				return false;
+			  }
+			  if(update_bought.value.match(num)){
+				  window.open('admin_report.php',"_self")
+			  }
+			  else{
+				  update_bought.style.border = "1px solid red";
+				  document.getElementById('update_error').style.color = "red";
+				  update_error.textContent = "*All inputs should be in numbers";
+				  update_bought.focus();
+				  return false;
+			  }
+			}
+			function ValidateC() {
+			  if (update_cancelled.value == "") {
+				update_cancelled.style.border = "1px solid red";
+				document.getElementById('cancel_error').style.color = "red";
+				cancel_error.textContent = "*Please input the reservation ID.";
+				update_cancelled.focus();
+				return false;
+			  }
+			  if(update_cancelled.value.match(num)){
+				  window.open('admin_report.php',"_self")
+			  }
+			  else{
+				  update_cancelled.style.border = "1px solid red";
+				  document.getElementById('cancel_error').style.color = "red";
+				  cancel_error.textContent = "*All inputs should be in numbers";
+				  update_cancelled.focus();
+				  return false;
+			  }
+			}
+			function ValidateO() {
+			  if (delete_order.value == "") {
+				delete_order.style.border = "1px solid red";
+				document.getElementById('delete_error').style.color = "red";
+				delete_error.textContent = "*Please input the reservation ID.";
+				delete_order.focus();
+				return false;
+			  }
+			  if(delete_order.value.match(num)){
+				  window.open('admin_report.php',"_self")
+                  alert("Successfully Deleted!")
+			  }
+			  else{
+				  delete_order.style.border = "1px solid red";
+				  document.getElementById('delete_error').style.color = "red";
+				  delete_error.textContent = "*All inputs should be in numbers";
+				  delete_order.focus();
+				  return false;
+			  }
+			}
+			
+			//EVENT HANDLER FUNCTIONS
+			function updateVerify(){
+				if (update_bought.value != ""){
+					update_bought.style.border = "1px solid #5E6E66";
+					update_error.innerHTML = "";
+					return true;
+				}
+			}
+			function cancelVerify(){
+				if (update_cancelled.value != ""){
+					update_cancelled.style.border = "1px solid #5E6E66";
+					cancel_error.innerHTML = "";
+					return true;
+				}
+			}
+			function deleteVerify(){
+				if (delete_order.value != ""){
+					delete_order.style.border = "1px solid #5E6E66";
+					delete_error.innerHTML = "";
+					return true;
+				}
+			}
+	
 			function check_delete(form) {
                     window.open('admin_report.php',"_self")
                     alert("Successfully Deleted!")

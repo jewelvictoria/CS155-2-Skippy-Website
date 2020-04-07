@@ -13,6 +13,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script src="http://use.edgefonts.net/bebas-neue:n4:default;montserrat:n4:default.js" type="text/javascript"></script>
 </head>
+
 <header>
 </header>
 <br> 
@@ -20,6 +21,7 @@
 	<center><img src="skippylogo.png" width="12%" style="border-radius: 50%; border: 4px solid #ddd; padding: 2px;" ></center>
 <br>
 <body>	
+
 	<div class="tab">
 	<button class="active" onclick="window.location.href = 'login_customer.php';">Register as Customer</button>
 	<button onclick="window.location.href = 'login_admin.php';">Login as Admin</button>
@@ -34,10 +36,12 @@
                     Register Information
                 </div>
             </h4>
+
             <div class="form-group">
                 Name: <input type="text" name="customer_name" class="form-control" placeholder="Juan Dela Cruz" size="25" maxlength="30">
 				<div id="name_error"></div>
 			</div>
+
             <div class="form-group">
                 Contact Number: <input type="tel" name="contact_number" class="form-control" placeholder="09XXXXXXXXX" size="25" minlength="9" maxlength="11">
 				<div id="num_error"></div>
@@ -107,7 +111,9 @@
 			}
 		}
 		
+
 		
+
 	</script>	
 	
 <br>

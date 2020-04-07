@@ -1,4 +1,8 @@
 <?php
+		if (isset($_POST["register"])){
+			header('Location: branding.php');
+		}
+		
 		$customername = $_POST["customer_name"];
 		$cnumber = $_POST["contact_number"];
 		

@@ -10,7 +10,7 @@
 	$connection = new mysqli($host, $dbUsername, $dbPassword, $dbname); 
 
 	//declaration	
-	$add_quantity = $_POST['add_quantity'];
+	$add_quantity = $_POST['input_quantity'];
 	$storage_code = $_POST['storage_code'];
 	$shirt_size = $_POST['shirt_size'];
 		

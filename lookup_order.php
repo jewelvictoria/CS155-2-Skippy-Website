@@ -47,21 +47,52 @@ session_start();
 <! –– =======================================BODY=========================================================== ––>
 <body>
 	<br>
-	<form action="lookup_with_order.php" method="post" >
-	<input type="submit" class="confirm_button" name="update" value="Look It Up" onclick="check_update(this.form)"><br>	
-	<center><input type="text" name="lookup_number" placeholder="Input ID" size="4" minlength="1" maxlength="15"></center>
+	<form action="lookup_with_order.php" method="post" onsubmit="return Validate()" name="vform">
+	<input type="submit" class="confirm_button" name="update" value="Look It Up" ><br>	
+	<center><input type="text" name="lookup_number" placeholder="Input ID" size="4" minlength="1" maxlength="15"><br>
+	<div id="id_error"></div></center>
 	</form>
 	<br>
 	
-<script language="javascript">
-            function check_confirm(form) { 
-                    window.open('login_customer.php',"_self")
-					alert("Successfully Reserved! Wait for two days to claim the product and then the reservation will expire three days after")
-            }
-			function check_cancel(form) { 
-                    window.open('login_customer.php',"_self")
-					alert("Successfully Cancelled! Your order was not recorded")
-            }
+<script type="text/javascript">
+			//GET ALL INPUT TEXT OBJECTS
+			var lookup_number = document.forms["vform"]["lookup_number"];
+			var num = /^[0-9]+$/;
+			
+			//GET ALL ERROR DISPLAY OBJECTS
+			var id_error = document.getElementById("id_error");
+			
+			// SETTING ALL EVENT LISTENERS
+			lookup_number.addEventListener('blur', idVerify, true);
+			
+			// function validation
+			function Validate() {
+			  if (lookup_number.value == "") {
+				lookup_number.style.border = "1px solid red";
+				document.getElementById('id_error').style.color = "red";
+				id_error.textContent = "*Please input your reservation ID.";
+				lookup_number.focus();
+				return false;
+			  }
+			  if(lookup_number.value.match(num)){
+				  window.open('login_customer.php',"_self");
+			  }
+			  else{
+				  lookup_number.style.border = "1px solid red";
+				  document.getElementById('id_error').style.color = "red";
+				  id_error.textContent = "*All inputs should be in number/s";
+				  lookup_number.focus();
+				  return false;
+			  }
+			}
+			//EVENT HANDLER FUNCTIONS
+			function idVerify(){
+				if (lookup_number.value != ""){
+					lookup_number.style.border = "1px solid #5E6E66";
+					id_error.innerHTML = "";
+					return true;
+				}
+			}
 
 	</script>	
 
