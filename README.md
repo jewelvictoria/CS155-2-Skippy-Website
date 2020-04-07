@@ -2,8 +2,9 @@
 CS155-2 Term Project
 
 with 
-Ethan Moncayo
 Nerisse Isada
+Angelica Adriano
+Ethan Moncayo
 Jan Millicent San Luis
 Dan Nicoel Jacinto
-Angelica Adriano
+
