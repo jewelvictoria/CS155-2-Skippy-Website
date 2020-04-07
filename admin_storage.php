@@ -40,7 +40,7 @@
 <br>
 <center>
 	
-	<form action="button_add_storage.php" method="post" >
+	<form action="button_add_storage.php" method="post" onsubmit="return ValidateA()" name="vformA">
 		<select name="storage_code">
 					<option value="" disabled selected>Select Product Code</option>
 					<option value="B9003_S">B9003</option>
@@ -52,13 +52,13 @@
 					<option value="Medium">Medium</option>
 					<option value="Large">Large</option>
 		</select><br>
-		<input type="text" name="input_quantity" placeholder="Input Quantity" size="17" minlength="1" maxlength="3">
-		<div id="num_error"></div><br><br>
-		<input type="submit" class="update_button" name="update" value="Add Storage Count" onclick="check_update(this.form)">
+		<input type="text" name="add_quantity" placeholder="Input Quantity" size="17" minlength="1" maxlength="3">
+		<div id="add_error"></div></center><br><br>
+		<input type="submit" class="update_button" name="update" value="Add Storage Count">
 	</form>
 	<br><br>
 	
-	<form action="button_subtract_storage.php" method="post" >
+	<form action="button_subtract_storage.php" method="post" onsubmit="return ValidateD()" name="vformD">
 		<select name="storage_code">
 					<option value="" disabled selected>Select Product Code</option>
 					<option value="B9003_S">B9003</option>
@@ -70,9 +70,9 @@
 					<option value="Medium">Medium</option>
 					<option value="Large">Large</option>
 		</select><br>
-		<input type="text" name="input_quantity" placeholder="Input Quantity" size="17" minlength="1" maxlength="3">
-		<div id="num_error"></div><br><br>
-		<input type="submit" class="delete_button" name="update" value="Deduct Storage Count" onclick="check_update(this.form)">
+		<input type="text" name="subtract_quantity" placeholder="Input Quantity" size="17" minlength="1" maxlength="3">
+		<div id="subtract_error"></div></center><br><br>
+		<input type="submit" class="delete_button" name="update" value="Deduct Storage Count">
 	</form>
 	
 	
@@ -80,55 +80,77 @@
 	
 </center>
 
-<script language="javascript">
-            function check_update(form) { 
-                    window.open('admin_storage.php',"_self")
-            }
-			function check_delete(form) {
-                    window.open('admin_storage.php',"_self")
-                    alert("Successfully Deleted!")
-            }
-			
+	<script type="text/javascript">
 			//GET ALL INPUT TEXT OBJECTS
-			var input_quantity = document.forms["vform"]["input_quantity"];
+			var add_quantity = document.forms["vformA"]["add_quantity"];
+			var subtract_quantity = document.forms["vformD"]["subtract_quantity"];
 			var num = /^[0-9]+$/;
 			
 			//GET ALL ERROR DISPLAY OBJECTS
-			var num_error = document.getElementById("num_error");
+			var add_error = document.getElementById("add_error");
+			var subtract_error = document.getElementById("subtract_error");
 			
 			// SETTING ALL EVENT LISTENERS
-			input_quantity.addEventListener('blur', numVerify, true);
+			add_quantity.addEventListener('blur', addVerify, true);
+			subtract_quantity.addEventListener('blur', subtractVerify, true);
 			
 			// function validation
-			function Validate() {
-			  if (input_quantity.value == "") {
-				input_quantity.style.border = "1px solid red";
-				document.getElementById('num_error').style.color = "red";
-				num_error.textContent = "*number input is required";
-				input_quantity.focus();
+			function ValidateA() {
+				if (add_quantity.value == "") {
+				add_quantity.style.border = "1px solid red";
+				document.getElementById('add_error').style.color = "red";
+				add_error.textContent = "*Please input a quantity.";
+				add_quantity.focus();
 				return false;
 			  }
-			  if(input_quantity.value.match(num)){
-				  window.open('admin_storage.php',"_self")
-				  alert("Successfully Registered!")
+				if(add_quantity.value.match(num)){
+				  window.open('AdminReport.php',"_self")
 			  }
 			  else{
-				  input_quantity.style.border = "1px solid red";
-				  document.getElementById('num_error').style.color = "red";
-				  num_error.textContent = "*All inputs should be in number/s";
-				  input_quantity.focus();
+				  add_quantity.style.border = "1px solid red";
+				  document.getElementById('add_error').style.color = "red";
+				  add_error.textContent = "*All inputs should be in numbers.";
+				  add_quantity.focus();
+				  return false;
+			  }
+			}
+			function ValidateD() {
+			  if (subtract_quantity.value == "") {
+				subtract_quantity.style.border = "1px solid red";
+				document.getElementById('subtract_error').style.color = "red";
+				subtract_error.textContent = "*Please input a quantity.";
+				subtract_quantity.focus();
+				return false;
+			  }
+			  if(subtract_quantity.value.match(num)){
+				  window.open('AdminReport.php',"_self")
+				  alert("Successfully Deleted!")
+			  }
+			  else{
+				  subtract_quantity.style.border = "1px solid red";
+				  document.getElementById('subtract_error').style.color = "red";
+				  subtract_error.textContent = "*All inputs should be in numbers.";
+				  subtract_quantity.focus();
 				  return false;
 			  }
 			}
 			
 			//EVENT HANDLER FUNCTIONS
-			function numVerify(){
-				if (input_quantity.value != ""){
-					input_quantity.style.border = "1px solid #5E6E66";
-					num_error.innerHTML = "";
+			function addVerify(){
+				if (add_quantity.value != ""){
+					add_quantity.style.border = "1px solid #5E6E66";
+					add_error.innerHTML = "";
 					return true;
 				}
 			}
+			function subtractVerify(){
+				if (subtract_quantity.value != ""){
+					subtract_quantitystyle.border = "1px solid #5E6E66";
+					subtract_error.innerHTML = "";
+					return true;
+				}
+			}
+			
 	</script>	
 	
 <br><br><br>

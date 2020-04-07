@@ -61,7 +61,7 @@
 				echo "<script type='text/javascript'>alert('$message');</script>";
 			}
 			else{	
-				echo "Error Num ". $result . " was encountered!";
+				//echo "Error Num ". $result . " was encountered!";
 			}
 		$myfile = fopen("login_customer.php", "r") or die("Unable to open file!");
 		echo fread($myfile,filesize("login_customer.php"));
