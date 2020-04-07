@@ -1,0 +1,317 @@
+body {
+	background-color: #58abbf !important;
+    height: auto;
+    width: auto;
+}
+
+.logo-img{
+	margin-left: 2%;
+	margin-right: 1%;
+	height: 68%;
+	width: 13%;
+	border-radius: 50%;
+	border: 4px solid #ED1C20;
+}
+
+.dropdown {
+  	position: relative;
+	display: inline-block;
+}
+
+.dropbtn{
+	margin-left: -3%;
+	padding: 20px 30px;
+	height: 80px;
+	width: 120%;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: white;
+	min-width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	padding: 12px 0px;
+	margin-left: -3%;
+}
+
+.dropdown-content a {
+	display: block;
+	color: #5c5a54;
+	padding: 12px 15px;
+}
+
+.dropdown-content a:hover {
+	background-color: white;
+	color: black;
+	font-weight: bolder;
+	text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown:hover .dropbtn {
+	background-color: white;
+	color: black;
+}
+
+.icon-default{
+	display: inline-block;
+	margin-left: 8%;
+	transition: opacity .3s, transform .3s;
+}
+
+.sub-icon{
+	margin-top: -3%;
+	height: 20px;
+	width: 20px;
+	opacity: 0;
+	display: inline-block;
+	transition:
+			opacity 0.3s ease,
+			margin-left 0.3s ease-out;
+}
+
+.dropdown-content a:hover .sub-icon{
+	opacity: 1;
+	margin-left: 8%;
+}
+
+.subMenu{
+	font-family: 'Montserrat Medium', sans-serif;
+	display: inline;
+	margin-left: 8%;
+}
+
+header{
+	margin-top: -3.9%;
+}
+
+.tab {
+	height: 80px;
+	width: 100%;
+	float: left;
+	margin-top: 1.5%;
+	background-color: #f5efed;
+    transform: scale(1) translateX(0px) translateY(0px);
+	box-shadow:
+			-1px 1px #ffcc66, 2px 2px #ffcc66, -3px 3px #ffcc66,
+			-4px 4px #ffcc66, -5px 5px #ffcc66, -6px 6px #ffcc66,
+			-7px 7px #ffcc66, -8px 8px #ffcc66, -9px 9px #ffcc66,
+			-10px 10px #ffcc66, -11px 11px #ffcc66, -12px 12px #ffcc66,
+			-13px 13px #ffcc66, -14px 14px #ffcc66, -15px 15px #ffcc66,
+			-16px 16px #ffcc66, -17px 17px #ffcc66, -18px 18px #ffcc66,
+			-19px 19px #ffcc66, -20px 20px #ffcc66, -21px 21px #ffcc66;
+}
+
+span:nth-child(3), span:nth-child(7) {
+    font-size: 60px;
+}
+
+span:nth-child(1), span:nth-child(9), span:nth-child(5)  {
+    font-size: 110px;
+}
+
+.tab button {
+	color: white;
+	font-family: 'Montserrat Medium', sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.5s;
+	font-size: 18px;
+	border: none;
+	text-align: center;
+}
+
+.contact-us{
+	color: whitesmoke;
+	background-color: #ED1C20;
+    padding: 10px 15px;
+    margin-top: 1.2%;
+    margin-right: 2%;
+	font-family: 'Montserrat Medium', sans-serif;
+	height: 60%;
+    width: 13%;
+	border-radius: 30px;
+	border: 0;
+	float: right;
+	cursor: pointer;
+	transition: 0.5s;
+	font-size: 18px;
+}
+
+.tab button:hover{
+	color: white;
+	background-color: #ba1418;
+}
+
+.tab button.active {
+	background-color: transparent;
+	color: #5c5a54;
+}
+
+.dropdown:hover .icon-default{
+	transform: rotate(-180deg);
+}
+
+.header-img{
+	text-align: center;
+	height: 530px;
+	width: 100%;
+}
+
+.img-header{
+	height: 85.8%;
+	width: 90%;
+}
+
+.prod-type{
+	font-family: 'Yellowtail', cursive;
+	font-size: 180px;
+	color: black;
+	margin-top: -28%;
+	text-align: center;
+	text-shadow:
+			0 1px 0 #f5efed, 0 2px 0 #f5efed, 0 3px 0 #f5efed,
+			0 4px 0 #f5efed, 0 5px 0 #f5efed,
+			0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1),
+			0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2),
+			0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2),
+			0 20px 20px rgba(0,0,0,.15), 2px 2px 2px rgba(206,89,55,0);
+}
+
+.prod-body{
+	background-color: #f5efed;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	z-index: 1;
+	display: block;
+}
+
+.prod-row{
+	background-color: #f5efed;
+	width: 100%;
+	overflow: hidden;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-bottom: 4%;
+}
+
+.prod-card{
+	float: left;
+	text-align: center;
+}
+
+.card{
+	padding: 10% 5% 0%;
+	z-index: 0;
+	box-shadow:
+			-1px 1px #ED1C20, 2px 2px #ED1C20, -3px 3px #ED1C20,
+			-4px 4px #ED1C20, -5px 5px #ED1C20, -6px 6px #ED1C20,
+			-7px 7px #ED1C20, -8px 8px #ED1C20, -9px 9px #ED1C20,
+			-10px 10px #ED1C20, -11px 11px #ED1C20, -12px 12px #ED1C20,
+			-13px 13px #ED1C20, -14px 14px #ED1C20, -15px 15px #ED1C20;
+}
+
+/*.card1{
+	padding-bottom: 4.5%;
+}*/
+
+footer{
+	margin-top: -1.5%;
+	padding: 4% 3%;
+	background-color: #62c6de;
+	float: bottom;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.fm-footer{
+	margin-top: -5.5%;
+}
+
+.footer-col{
+	display: block;
+	float: left;
+}
+
+.prod-links{
+	margin-right: 3%;
+}
+
+.footer-titles, .footer-titles a{
+	font-family: "Bebas Neue", sans-serif;
+	font-size: 30px;
+}
+
+.titles1, .titles1 a{
+	color: #ED1C20;
+	text-decoration: none;
+	transition: text-decoration 0.5s ease;
+}
+
+.titles1 a:hover{
+	color: #ED1C20;
+	text-decoration: underline solid #ED1C20;
+}
+
+.titles2, .titles2 a{
+	color: #ffcc66;
+	text-decoration: none;
+	transition: text-decoration 0.5s ease;
+}
+
+.titles2 a:hover{
+	color: #ffcc66;
+	text-decoration: underline solid #ffcc66;
+}
+
+.sub-links, .sub-links a{
+	color: #f5efed;
+	font-family: 'Montserrat Medium', sans-serif;
+	text-decoration: none;
+	transition: font-weight 0.5s ease, color 0.5s ease;
+}
+
+.prod-sublinks a:hover{
+	color: #ED1C20;
+	font-weight: bolder;
+	text-decoration: none;
+}
+
+.support-sublinks a:hover{
+	color: #ffcc66;
+	font-weight: bolder;
+	text-decoration: none;
+}
+
+.link-icon{
+	height: 8%;
+	width: 8%;
+}
+
+.mapouter{
+	position:relative;
+	text-align:right;
+	height:140px;
+	width:300px;
+}
+
+.gmap_canvas {
+	overflow:hidden;
+	background:none!important;
+	height:140px;
+	width:300px;
+}
+
+.location-info{
+	font-family: 'Montserrat Medium', sans-serif;
+	font-size: 13px;
+}
+
+.invisible {
+	visibility: hidden;
+}
