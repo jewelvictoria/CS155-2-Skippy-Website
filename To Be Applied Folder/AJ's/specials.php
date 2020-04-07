@@ -6,10 +6,9 @@ session_start();
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Skippy - Fast Moving Products</title>
+    <title>Skippy - Specials Products</title>
 	<link href="skippy-icon.png" rel="icon" type="image">
 	<link rel="stylesheet" type="text/css" href="Other Products - CSS.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
@@ -19,11 +18,11 @@ session_start();
 </head>
 
 <header>
-    <br>
+<br />
     <div class="tab">
         <img src="skippylogo.PNG" class="logo-img" >
-        <a class="dropdown">
-            <a href="products.php"><button class="dropbtn active">Products</a><i class="fas fa-chevron-down icon-default"></i> </button></a>
+        <div class="dropdown">
+            <a href="products.php"><button class="dropbtn active">Products<i class="fas fa-chevron-down icon-default"></i> </button></a>
             <div class="dropdown-content">
                 <a href="branding.php"><p class="subMenu">Branding</p> <img src="icons-tshirt.png" class="sub-icon"></a>
                 <a href="fastmoving.php"><p class="subMenu">Fast Moving</p> <img src="icons-exercise.png" class="sub-icon"></a>
@@ -39,19 +38,19 @@ session_start();
 
 <div class="header-img">
     <img src="ChooseYourProduct2.png" alt="Choose Your Product" class="img-header">
-    <p class="prod-type">Fast Moving</p>
+    <p class="prod-type">Specials</p>
 </div>
 
 <div class="prod-body">
     <div class="prod-row">
         <div class="col-md-3 col-sm-6 mx-5 my-md-0 prod-card">
-            <input type="radio" class="invisible" name="product_price" value="Php 399.75" checked="checked">
+            <input type="radio" class="invisible" name="product_price" value="Php 699.75" checked="checked">
             <div class="card">
                 <div>
-                    <img src="F9004.png" alt="Image1" class="img-fluid">
+                    <img src="O8277.png" alt="Image1" class="img-fluid">
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">Vista Blue</h3>
+                    <h4 class="card-title">White Paradise</h4>
                     <h6>
                         <!--Rating, if for NO star \"far fa-star\"-->
                         <i class="fas fa-star"></i>
@@ -60,7 +59,7 @@ session_start();
                         <i class="fas fa-star"></i>
                         <i class="far fa-star"></i>
                     </h6>
-                    <h5 id="price-display">Php 399.75</h5>
+                    <h5 id="price-display">Php 699.75</h5>
                     <form action="reserve_product.php" method="post">
                         <select name="shirt_size">
                             <option value="disabled selected">Select Size</option>
@@ -77,7 +76,7 @@ session_start();
                             <option value="5">5</option>
                         </select><br>
 
-                        <button type="submit" class="btn btn-warning my-3" onclick="check(this.form)" name="button" value="F9004">
+                        <button type="submit" class="btn btn-warning my-3" onclick="check(this.form)" name="button" value="O8277">
                             Reserve  <i class="fas fa-cart-arrow-down"></i>
                         </button>
                     </form>
@@ -86,13 +85,13 @@ session_start();
         </div>
 
         <div class="col-md-3 col-sm-6 mx-4 my-md-0 prod-card">
-            <input type="radio" class="invisible" name="product_price" value="Php 399.75" checked="checked">
+            <input type="radio" class="invisible" name="product_price" value="Php 549.75" checked="checked">
             <div class="card">
                 <div>
-                    <img src="F9010.png" alt="Image2" class="img-fluid">
+                    <img src="O9007.png" alt="Image2" class="img-fluid">
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">Bluebell</h3>
+                    <h3 class="card-title">Gray Varsity</h3>
                     <h6>
                         <!--Rating, if for NO star \"far fa-star\"-->
                         <i class="fas fa-star"></i>
@@ -101,7 +100,7 @@ session_start();
                         <i class="far fa-star"></i>
                         <i class="far fa-star"></i>
                     </h6>
-                    <h5 id="price-display">Php 399.75</h5>
+                    <h5 id="price-display">Php 549.75</h5>
                     <form action="reserve_product.php" method="post">
                         <select name="shirt_size">
                             <option value="disabled selected">Select Size</option>
@@ -118,7 +117,7 @@ session_start();
                             <option value="5">5</option>
                         </select><br>
 
-                        <button type="submit" class="btn btn-warning my-3" onclick="check(this.form)" name="button" value="F9010">
+                        <button type="submit" class="btn btn-warning my-3" onclick="check(this.form)" name="button" value=O9007">
                             Reserve  <i class="fas fa-cart-arrow-down"></i>
                         </button>
                     </form>
@@ -127,13 +126,13 @@ session_start();
         </div>
 
         <div class="col-md-3 col-sm-6 mx-5 my-md-0 prod-card">
-            <input type="radio" class="invisible" name="product_price" value="Php 399.75" checked="checked">
+            <input type="radio" class="invisible" name="product_price" value="Php 549.75" checked="checked">
             <div class="card">
                 <div>
-                    <img src="F9011.png" alt="Image3" class="img-fluid">
+                    <img src="O9009.png" alt="Image3" class="img-fluid">
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">Pink Moving</h3>
+                    <h3 class="card-title">Blue Varsity</h3>
                     <h6>
                         <!--Rating, if for NO star \"far fa-star\"-->
                         <i class="fas fa-star"></i>
@@ -142,7 +141,7 @@ session_start();
                         <i class="fas fa-star"></i>
                         <i class="far fa-star"></i>
                     </h6>
-                    <h5 id="price-display">Php 399.75</h5>
+                    <h5 id="price-display">Php 549.75</h5>
                     <form action="reserve_product.php" method="post">
                         <select name="shirt_size">
                             <option value="disabled selected">Select Size</option>
@@ -159,7 +158,7 @@ session_start();
                             <option value="5">5</option>
                         </select><br>
 
-                        <button type="submit" class="btn btn-warning my-3" onclick="check(this.form)" name="button" value="F9011">
+                        <button type="submit" class="btn btn-warning my-3" onclick="check(this.form)" name="button" value="O9009">
                             Reserve  <i class="fas fa-cart-arrow-down"></i>
                         </button>
                     </form>
@@ -170,13 +169,13 @@ session_start();
 
     <div class="prod-row">
         <div class="col-md-3 col-sm-6 mx-5 my-md-0 prod-card">
-            <input type="radio" class="invisible" name="product_price" value="Php 399.75" checked="checked">
+            <input type="radio" class="invisible" name="product_price" value="Php 699.75" checked="checked">
             <div class="card">
                 <div>
-                    <img src="F9020.png" alt="Image3" class="img-fluid">
+                    <img src="O9031.png" alt="Image3" class="img-fluid">
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">Aurora</h3>
+                    <h4 class="card-title">Heather Gray</h4>
                     <h6>
                         <!--Rating, if for NO star \"far fa-star\"-->
                         <i class="fas fa-star"></i>
@@ -185,7 +184,7 @@ session_start();
                         <i class="fas fa-star"></i>
                         <i class="far fa-star"></i>
                     </h6>
-                    <h5 id="price-display">Php 399.75</h5>
+                    <h5 id="price-display">Php 699.75</h5>
                     <form action="reserve_product.php" method="post">
                         <select name="shirt_size">
                             <option value="disabled selected">Select Size</option>
@@ -202,7 +201,7 @@ session_start();
                             <option value="5">5</option>
                         </select><br>
 
-                        <button type="submit" class="btn btn-warning my-3" onclick="check(this.form)" name="button" value="F9020">
+                        <button type="submit" class="btn btn-warning my-3" onclick="check(this.form)" name="button" value="O9031">
                             Reserve  <i class="fas fa-cart-arrow-down"></i>
                         </button>
                     </form>
@@ -211,13 +210,13 @@ session_start();
         </div>
 
         <div class="col-md-3 col-sm-6 mx-4 my-md-0 prod-card">
-            <input type="radio" class="invisible" name="product_price" value="Php 399.75" checked="checked">
+            <input type="radio" class="invisible" name="product_price" value="Php 549.75" checked="checked">
             <div class="card">
                 <div>
-                    <img src="F9023.png" alt="Image3" class="img-fluid">
+                    <img src="O9065.png" alt="Image3" class="img-fluid">
                 </div>
                 <div class="card-body">
-                    <h4 class="card-title">Yellow Moving</h4>
+                    <h3 class="card-title">Tribal Circle</h3>
                     <h6>
                         <!--Rating, if for NO star \"far fa-star\"-->
                         <i class="fas fa-star"></i>
@@ -226,7 +225,7 @@ session_start();
                         <i class="far fa-star"></i>
                         <i class="far fa-star"></i>
                     </h6>
-                    <h5 id="price-display">Php 399.75</h5>
+                    <h5 id="price-display">Php 549.75</h5>
                     <form action="reserve_product.php" method="post">
                         <select name="shirt_size">
                             <option value="disabled selected">Select Size</option>
@@ -243,7 +242,7 @@ session_start();
                             <option value="5">5</option>
                         </select><br>
 
-                        <button type="submit" class="btn btn-warning my-3" onclick="check(this.form)" name="button" value="F9023">
+                        <button type="submit" class="btn btn-warning my-3" onclick="check(this.form)" name="button" value="O9065">
                             Reserve  <i class="fas fa-cart-arrow-down"></i>
                         </button>
                     </form>
@@ -252,13 +251,13 @@ session_start();
         </div>
 
         <div class="col-md-3 col-sm-6 mx-5 my-md-0 prod-card">
-            <input type="radio" class="invisible" name="product_price" value="Php 399.75" checked="checked">
+            <input type="radio" class="invisible" name="product_price" value="Php 549.75" checked="checked">
             <div class="card">
                 <div>
-                    <img src="F9036.png" alt="Image3" class="img-fluid">
+                    <img src="O9129.png" alt="Image3" class="img-fluid">
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">Red Heather</h3>
+                    <h4 class="card-title">Brand Military</h4>
                     <h6>
                         <!--Rating, if for NO star \"far fa-star\"-->
                         <i class="fas fa-star"></i>
@@ -267,7 +266,7 @@ session_start();
                         <i class="fas fa-star"></i>
                         <i class="far fa-star"></i>
                     </h6>
-                    <h5 id="price-display">Php 399.75</h5>
+                    <h5 id="price-display">Php 549.75</h5>
                     <form action="reserve_product.php" method="post">
                         <select name="shirt_size">
                             <option value="disabled selected">Select Size</option>
@@ -284,7 +283,7 @@ session_start();
                             <option value="5">5</option>
                         </select><br>
 
-                        <button type="submit" class="btn btn-warning my-3" onclick="check(this.form)" name="button" value="F9036">
+                        <button type="submit" class="btn btn-warning my-3" onclick="check(this.form)" name="button" value="O9129">
                             Reserve  <i class="fas fa-cart-arrow-down"></i>
                         </button>
                     </form>
@@ -294,10 +293,8 @@ session_start();
     </div>
 </div>
 
-<br>
-<br>
 <script language="javascript">
-           function check(form) { 
+            function check(form) { 
                     window.open('confirmation_of_order.php',"_self")
             }
 
@@ -311,7 +308,7 @@ session_unset();
 session_destroy();
 ?>
 
-<footer class="fm-footer">
+<footer>
     <div class="f_section">
         <div class="col-md-2 mx-md-1 footer-col prod-links">
             <h3 class="footer-titles titles1"><a href="products.php">Products</a> </h3>

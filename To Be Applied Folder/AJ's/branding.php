@@ -69,6 +69,14 @@ session_start();
                             <option value="Small">Small</option>
                             <option value="Medium">Medium</option>
                             <option value="Large">Large</option>
+                        </select>
+                        <select name="quantity">
+                            <option value="" disabled selected>Input Quantity</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select><br>
 
                         <button type="submit" class="btn btn-warning my-3" onclick="check(this.form)" name="button" value="B9003">
@@ -102,6 +110,14 @@ session_start();
                             <option value="Small">Small</option>
                             <option value="Medium">Medium</option>
                             <option value="Large">Large</option>
+                        </select>
+                        <select name="quantity">
+                            <option value="" disabled selected>Input Quantity</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select><br>
 
                         <button type="submit" class="btn btn-warning my-3" onclick="check(this.form)" name="button" value="B9022">
@@ -135,6 +151,14 @@ session_start();
                             <option value="Small">Small</option>
                             <option value="Medium">Medium</option>
                             <option value="Large">Large</option>
+                        </select>
+                        <select name="quantity">
+                            <option value="" disabled selected>Input Quantity</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select><br>
 
                         <button type="submit" class="btn btn-warning my-3" onclick="check(this.form)" name="button" value="B9060">
@@ -170,6 +194,14 @@ session_start();
                             <option value="Small">Small</option>
                             <option value="Medium">Medium</option>
                             <option value="Large">Large</option>
+                        </select>
+                        <select name="quantity">
+                            <option value="" disabled selected>Input Quantity</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select><br>
 
                         <button type="submit" class="btn btn-warning my-3" onclick="check(this.form)" name="button" value="B9069">
@@ -203,6 +235,14 @@ session_start();
                             <option value="Small">Small</option>
                             <option value="Medium">Medium</option>
                             <option value="Large">Large</option>
+                        </select>
+                        <select name="quantity">
+                            <option value="" disabled selected>Input Quantity</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select><br>
 
                         <button type="submit" class="btn btn-warning my-3" onclick="check(this.form)" name="button" value="B9097">
@@ -236,6 +276,14 @@ session_start();
                             <option value="Small">Small</option>
                             <option value="Medium">Medium</option>
                             <option value="Large">Large</option>
+                        </select>
+                        <select name="quantity">
+                            <option value="" disabled selected>Input Quantity</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select><br>
 
                         <button type="submit" class="btn btn-warning my-3" onclick="check(this.form)" name="button" value="B9133">
