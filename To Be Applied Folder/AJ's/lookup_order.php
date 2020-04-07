@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="utf-8" />
     <title>Skippy - Look Up Order</title>
-	<link href="skippylogo.png" rel="icon" type="image">
+	<link href="skippylogo.PNG" rel="icon" type="image">
 	<link rel="stylesheet" type="text/css" href="Login - CSS.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -21,8 +21,8 @@ session_start();
     <img src="skippylogo.PNG" class="logo-img">
     <div class="main-section">
         <div class="tab">
-            <button onclick="window.location.href = 'LoginCustomer.php';">Register as Customer</button>
-            <button onclick="window.location.href = 'LoginAdmin.php';">Login as Admin</button>
+            <button onclick="window.location.href = 'login_customer.php';">Register as Customer</button>
+            <button onclick="window.location.href = 'login_admin.php';">Login as Admin</button>
             <button class="active" onclick="window.location.href = 'lookup_order.php';">Look Up Order</button>
         </div>
 
@@ -51,11 +51,11 @@ session_start();
 	
 <script language="javascript">
             function check_confirm(form) { 
-                    window.open('LoginCustomer.php',"_self")
+                    window.open('login_customer.php',"_self")
 					alert("Successfully Reserved! Wait for two days to claim the product and then the reservation will expire three days after")
             }
 			function check_cancel(form) { 
-                    window.open('LoginCustomer.php',"_self")
+                    window.open('login_customer.php',"_self")
 					alert("Successfully Cancelled! Your order was not recorded")
             }
 
