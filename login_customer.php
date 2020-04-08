@@ -56,64 +56,93 @@
 
     <script type="text/javascript">
         //GET ALL INPUT TEXT OBJECTS
-        var customer_name = document.forms["vform"]["customer_name"];
-        var contact_number = document.forms["vform"]["contact_number"];
-        var num = /^[0-9]+$/;
+		var customer_name = document.forms["vform"]["customer_name"];
+		var contact_number = document.forms["vform"]["contact_number"];
+		var maxAmount = 11;
+		var num = /^[0-9]+$/;
+		var mno = /^\(?([0]{1})\)?[-. ]?([9]{1})[-. ]?([0-9]{9})$/;
+		
+		//GET ALL ERROR DISPLAY OBJECTS
+		var name_error = document.getElementById("name_error");
+		var num_error = document.getElementById("num_error");
+		
+		// SETTING ALL EVENT LISTENERS
+		customer_name.addEventListener('blur', nameVerify, true);
+		contact_number.addEventListener('blur', numVerify, true);
+		
+		// function validation
+		function Validate() {
+		  if (customer_name.value == "") {
+			customer_name.style.border = "1px solid red";
+			document.getElementById('name_error').style.color = "red";
+			name_error.textContent = "*Name is required";
+			customer_name.focus();
+			return false;
+		  }
+		  if (contact_number.value == "") {
+			contact_number.style.border = "1px solid red";
+			document.getElementById('num_error').style.color = "red";
+			num_error.textContent = "*Contact number is required";
+			contact_number.focus();
+			return false;
+		  }
+		  if(contact_number.value.length < maxAmount){
+			contact_number.style.border = "1px solid red";
+			document.getElementById('num_error').style.color = "red";
+			num_error.textContent = "*Please enter an 11 digit number.";
+			contact_number.focus();
+			return false;
+		  }
+		  if(contact_number.value.length > maxAmount){
+			contact_number.style.border = "1px solid red";
+			document.getElementById('num_error').style.color = "red";
+			num_error.textContent = "*Please enter an 11 digit number.";
+			contact_number.focus();
+			return false;
+		  }
+		  if(contact_number.value.match(mno)){
+			  window.open('branding.php',"_self")
+		  }
+		  else{
+			  contact_number.style.border = "1px solid red";
+			  document.getElementById('num_error').style.color = "red";
+			  num_error.textContent = "*Please input your mobile number.";
+			  contact_number.focus();
+			  return false;
+		  }
+		  if(contact_number.value.match(num)){
+			  window.open('branding.php',"_self")
+              alert("Successfully Registered!")
+		  }
+		  else{
+			  contact_number.style.border = "1px solid red";
+			  document.getElementById('num_error').style.color = "red";
+			  num_error.textContent = "*All inputs should be in numbers";
+			  contact_number.focus();
+			  return false;
+		  }
+		}
+		
+		//EVENT HANDLER FUNCTIONS
+		function nameVerify(){
+			if (customer_name.value != ""){
+				customer_name.style.border = "1px solid #5E6E66";
+				name_error.innerHTML = "";
+				return true;
+			}
+		}
+		function numVerify(){
+			if (contact_number.value != ""){
+				contact_number.style.border = "1px solid #5E6E66";
+				num_error.innerHTML = "";
+				return true;
+			}
+		}
+		
 
-        //GET ALL ERROR DISPLAY OBJECTS
-        var name_error = document.getElementById("name_error");
-        var num_error = document.getElementById("num_error");
+		
 
-        // SETTING ALL EVENT LISTENERS
-        customer_name.addEventListener('blur', nameVerify, true);
-        contact_number.addEventListener('blur', numVerify, true);
-
-        // function validation
-        function Validate() {
-            if (customer_name.value == "") {
-                customer_name.style.border = "1px solid red";
-                document.getElementById('name_error').style.color = "red";
-                name_error.textContent = "*Name is required";
-                customer_name.focus();
-                return false;
-            }
-            if (contact_number.value == "") {
-                contact_number.style.border = "1px solid red";
-                document.getElementById('num_error').style.color = "red";
-                num_error.textContent = "*Contact number is required";
-                contact_number.focus();
-                return false;
-            }
-            if(contact_number.value.match(num)){
-                window.open('branding.php',"_self")
-                alert("Successfully Registered!")
-            }
-            else{
-                contact_number.style.border = "1px solid red";
-                document.getElementById('num_error').style.color = "red";
-                num_error.textContent = "*All inputs should be in numbers";
-                contact_number.focus();
-                return false;
-            }
-        }
-
-        //EVENT HANDLER FUNCTIONS
-        function nameVerify(){
-            if (customer_name.value != ""){
-                customer_name.style.border = "1px solid #5E6E66";
-                name_error.innerHTML = "";
-                return true;
-            }
-        }
-        function numVerify(){
-            if (contact_number.value != ""){
-                contact_number.style.border = "1px solid #5E6E66";
-                num_error.innerHTML = "";
-                return true;
-            }
-        }
-
-    </script>
+	</script>	
 
 </body>
 </html>

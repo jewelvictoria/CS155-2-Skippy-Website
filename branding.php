@@ -8,7 +8,7 @@ session_start();
 <head>
     <meta charset="utf-8" />
     <title>Skippy - Branding Product</title>
-	<link href="skippy-icon.png" rel="icon" type="image">
+	<link href="skippylogo.png" rel="icon" type="image">
 	<link rel="stylesheet" type="text/css" href="Other Products - CSS.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">

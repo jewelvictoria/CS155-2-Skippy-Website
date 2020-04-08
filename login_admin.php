@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Skippy - Login as Admin</title>
-	<link href="skippy-icon.png" rel="icon" type="image">
+	<link href="skippylogo.png" rel="icon" type="image">
 	<link rel="stylesheet" type="text/css" href="Login - CSS.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -37,6 +37,7 @@
                             <label for="username">Username</label>
                             <input type="text" class="form-control" id="username" name="username">
                         </div>
+						
                         <div>
                             <label for="pass">Password</label>
                             <input type="password" class="form-control" id="pass" name="pass" minlength="8" required>

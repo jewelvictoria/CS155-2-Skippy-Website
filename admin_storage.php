@@ -44,7 +44,7 @@
 		<select name="storage_code">
 					<option value="" disabled selected>Select Product Code</option>
 					<option value="B9003_S">B9003</option>
-					<option value="B9022_S">B9002</option>
+					<option value="B9022_S">B9022</option>
 		</select><br>
 		<select name="shirt_size">
 					<option value="" disabled selected>Select Shirt Size</option>
@@ -52,7 +52,7 @@
 					<option value="Medium">Medium</option>
 					<option value="Large">Large</option>
 		</select><br>
-		<input type="text" name="add_quantity" placeholder="Input Quantity" size="17" minlength="1" maxlength="3">
+		<input type="text" name="input_quantity" placeholder="Input Quantity" size="17" minlength="1" maxlength="3">
 		<div id="add_error"></div></center><br><br>
 		<input type="submit" class="update_button" name="update" value="Add Storage Count">
 	</form>
@@ -70,7 +70,7 @@
 					<option value="Medium">Medium</option>
 					<option value="Large">Large</option>
 		</select><br>
-		<input type="text" name="subtract_quantity" placeholder="Input Quantity" size="17" minlength="1" maxlength="3">
+		<input type="text" name="input_quantity" placeholder="Input Quantity" size="17" minlength="1" maxlength="3">
 		<div id="subtract_error"></div></center><br><br>
 		<input type="submit" class="delete_button" name="update" value="Deduct Storage Count">
 	</form>
