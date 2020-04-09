@@ -1,6 +1,6 @@
 <?php
 		if (isset($_POST["register"])){
-			header('Location: branding.php');
+			header('Location: products.php');
 		}
 		
 		$customername = $_POST["customer_name"];
@@ -60,7 +60,7 @@
 			echo "All fields are required";
 		}
 		
-		$myfile = fopen("branding.php", "r") or die("Unable to open file!");
-		echo fread($myfile,filesize("branding.php"));
+		$myfile = fopen("products.php", "r") or die("Unable to open file!");
+		echo fread($myfile,filesize("products.php"));
 		fclose($myfile);
 	?>

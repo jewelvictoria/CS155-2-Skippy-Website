@@ -22,8 +22,8 @@ session_start();
     <br>
     <div class="tab">
         <img src="skippylogo.PNG" class="logo-img" >
-        <a class="dropdown">
-            <a href="products.php"><button class="dropbtn active">Products</a><i class="fas fa-chevron-down icon-default"></i> </button></a>
+        <div class="dropdown">
+            <a href="products.php"><button class="dropbtn active">Products<i class="fas fa-chevron-down icon-default"></i> </button></a>
             <div class="dropdown-content">
                 <a href="branding.php"><p class="subMenu">Branding</p> <img src="icons-tshirt.png" class="sub-icon"></a>
                 <a href="fastmoving.php"><p class="subMenu">Fast Moving</p> <img src="icons-exercise.png" class="sub-icon"></a>

@@ -46,9 +46,10 @@
 		$name = $data['name'];
 		$number = '0'.$trial_number;
 		$msg = "Hi $name! this is Skippy, your Reservation ID is $id. You may look up your order online. \n \n";
-		$api = "TR-COMPA075847_6LNYN";
-		$apipass= "8cn%&a}d}x";
+		$api = "TR-CS155378631_R6HXK";
+		$apipass= "({a76v&#1u";
 		
+
 			$result = itexmo($number,$msg,$api,$apipass);
 			
 			if ($result == ""){
@@ -57,8 +58,7 @@
 			Please CONTACT US for help. ";	
 			}
 			else if ($result == 0){
-				$message = "Message Sent!";
-				echo "<script type='text/javascript'>alert('$message');</script>";
+				//Message is successfully sent!
 			}
 			else{	
 				//echo "Error Num ". $result . " was encountered!";
