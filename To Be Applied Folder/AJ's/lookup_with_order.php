@@ -21,9 +21,9 @@ session_start();
 <img src="skippylogo.PNG" class="logo-img">
 <div class="main-section">
     <div class="tab">
-        <button class="active" onclick="window.location.href = 'login_customer.php';">Register as Customer</button>
+        <button onclick="window.location.href = 'login_customer.php';">Register as Customer</button>
         <button onclick="window.location.href = 'login_admin.php';">Login as Admin</button>
-        <button onclick="window.location.href = 'lookup_order.php';">Look Up Order</button>
+        <button class="active" onclick="window.location.href = 'lookup_order.php';">Look Up Order</button>
     </div>
 
     <form action="new_transaction.php" method="post" class="form-horizontal" onsubmit="return Validate()" name="vform">
