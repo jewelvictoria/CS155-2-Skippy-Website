@@ -1,0 +1,275 @@
+body {
+	background-color: #f5efed !important;
+	height: auto;
+	width: auto;
+}
+
+.logo-img{
+	margin-left: 2%;
+	margin-right: 1%;
+	width: 13%;
+	border-radius: 50%;
+	border: 4px solid #ED1C20;
+}
+
+header{
+	margin-top: -3.9%;
+}
+
+.tab {
+	height: 80px;
+	width: 100%;
+	float: left;
+	margin-top: 1.5%;
+	background-color: #ffcc66;
+	transform: scale(1) translateX(0px) translateY(0px);
+	box-shadow:
+			-1px 1px #62c6de, 2px 2px #62c6de, -3px 3px #62c6de,
+			-4px 4px #62c6de, -5px 5px #62c6de, -6px 6px #62c6de,
+			-7px 7px #62c6de, -8px 8px #62c6de, -9px 9px #62c6de,
+			-10px 10px #62c6de, -11px 11px #62c6de, -12px 12px #62c6de,
+			-13px 13px #62c6de, -14px 14px #62c6de, -15px 15px #62c6de,
+			-16px 16px #62c6de, -17px 17px #62c6de, -18px 18px #62c6de,
+			-19px 19px #62c6de, -20px 20px #62c6de, -21px 21px #62c6de;
+}
+
+span:nth-child(3), span:nth-child(7) {
+	font-size: 60px;
+}
+
+span:nth-child(1), span:nth-child(9), span:nth-child(5)  {
+	font-size: 110px;
+}
+
+.admin-pages {
+	position: relative;
+	display: inline-block;
+}
+
+.admin-pages button {
+	color: white;
+	background-color: transparent;
+	font-family: 'Montserrat Medium', sans-serif;
+	cursor: pointer;
+	transition: all 0.5s ease-in;
+	font-size: 18px;
+	border: none;
+	text-align: center;
+	padding: 26px 30px;
+}
+
+.back-to-login{
+	color: whitesmoke;
+	background-color: #ED1C20;
+	margin-right: 2%;
+	margin-top: 1.2%;
+	font-family: 'Montserrat Medium', sans-serif;
+	height: 60%;
+	width: 15%;
+	border-radius: 30px;
+	border: 0;
+	float: right;
+	cursor: pointer;
+	transition: 0.5s;
+	font-size: 18px;
+	font-weight: bolder;
+}
+
+.back-to-login:hover{
+	color: white;
+	background-color: #ba1418;
+}
+
+.admin-pages button:hover{
+	color: black;
+	font-weight: bolder;
+	box-shadow: 0px 2px 8px -1px rgba(0,0,0,0.75);
+}
+
+.admin-pages button.active {
+	background-color: transparent;
+	color: black;
+	font-weight: bolder;
+	box-shadow: 0px 2px 8px -1px rgba(0,0,0,0.75);
+}
+
+.top{
+	text-align: center;
+	margin-top: 15%;
+	margin-bottom: 3%;
+}
+
+.contact_text{
+	font-family: "Bebas Neue", sans-serif;
+	font-size: 70px;
+	letter-spacing: 5px;
+	color: black;
+}
+
+.iframe-section{
+	margin-bottom: 5%;
+}
+
+.crud-body{
+	display: block;
+	text-align: center;
+	margin-bottom: 10%;
+	width: 100%;
+	height: 300px;
+	padding: 5% 10%;
+}
+
+.crud-storage{
+	margin-bottom: 15%;
+	padding: 5% 22%;
+	margin-left: 3%;
+}
+
+.crud-section{
+	float: left;
+	margin: 0% 2%;
+}
+
+.quantity-section{
+	float: left;
+	margin: 0 6%;
+}
+
+.crud-btn{
+	color: white;
+	font-family: "Montserrat Medium", sans-serif;
+	border: none;
+	cursor: pointer;
+	padding: 15px 18px;
+	transition: 0.3s;
+	font-size: 20px;
+	border-radius: 30px;
+	margin-bottom: 8%;
+}
+
+.add_button{
+	background-color: #4CAF50;
+}
+
+.update_button1{
+	background-color: #62c6de;
+}
+
+.update_button2{
+	background-color: #ffcc66;
+}
+
+.delete_button{
+	background-color: #ED1C20;
+}
+
+.add_button:hover{
+	background-color: #006600;
+}
+
+.update_button1:hover{
+	background-color: #58abbf;
+}
+
+.update_button2:hover{
+	background-color: #f2c261;
+}
+
+.delete_button:hover{
+	background-color: #ba1418;
+}
+
+.input-id{
+	width: 85%;
+	border: none;
+	font-family: "Montserrat Medium", sans-serif;
+}
+
+.input-storage{
+	margin-top: 4%;
+}
+
+.input-id:focus{
+	border: 2px solid #5c5a54;
+}
+
+.selection{
+	width: 85%;
+	margin: 2% 0%;
+	border: none;
+	color: #8f8f8f;
+	padding: 1px 0;
+	font-family: "Montserrat Medium", sans-serif;
+}
+
+.selection:focus{
+	color: dimgrey;
+	border: 2px solid #5c5a54;
+}
+
+iframe 
+{
+    float: left;
+    border: 1px solid #006600;
+	width:100%;
+	margin-bottom: 5%;
+}
+
+footer{
+	margin-top: -1.5%;
+	padding: 4% 3%;
+	background-color: #62c6de;
+	float: bottom;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.fm-footer{
+	margin-top: -5.5%;
+}
+
+.footer-col{
+	display: block;
+	float: left;
+}
+
+.footer-titles, .footer-titles a{
+	font-family: "Bebas Neue", sans-serif;
+	font-size: 30px;
+}
+
+.titles1, .titles1 a{
+	color: #ED1C20;
+	text-decoration: none;
+	transition: text-decoration 0.5s ease;
+}
+
+.titles2, .titles2 a{
+	color: #ffcc66;
+	text-decoration: none;
+	transition: text-decoration 0.5s ease;
+}
+
+.sub-links, .sub-links a{
+	color: #f5efed;
+	font-family: 'Montserrat Medium', sans-serif;
+	text-decoration: none;
+	transition: font-weight 0.5s ease, color 0.5s ease;
+}
+
+.admin-sublinks a:hover{
+	color: #ED1C20;
+	font-weight: bolder;
+	text-decoration: none;
+}
+
+.login-sublinks a:hover{
+	color: #ffcc66;
+	font-weight: bolder;
+	text-decoration: none;
+}
+
+.link-icon{
+	height: 8%;
+	width: 8%;
+}
