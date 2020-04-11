@@ -70,6 +70,7 @@
             </form>
         </div>
     </div>
+
 	<script type="text/javascript">
 			//GET ALL INPUT TEXT OBJECTS
 			var add_quantity = document.forms["vformA"]["input_quantity"];
@@ -141,7 +142,8 @@
 				}
 			}
 			
-	</script>	
+	</script>
+	<br><br>	
     <footer>
         <div class="f_section">
             <div class="col-md-3 mx-md-1 footer-col">
