@@ -1,11 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <title>Skippy - Order Confirmation</title>
 	<link href="skippylogo.PNG" rel="icon" type="image">
 	<link rel="stylesheet" type="text/css" href="Login - CSS.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -31,8 +32,11 @@
                         </div>
                     </h4>
 
-                    <iframe src="display_confirmation.php" align="middle" onload="this.style.height=(this.contentDocument.body.scrollHeight+45) +'px';" scrolling="no">
-                    </iframe>
+                    <div class="iframe-section">
+                        <iframe src="display_confirmation.php" align="middle" onload="this.style.height=(this.contentDocument.body.scrollHeight+45) +'px';" scrolling="no">
+                        </iframe>
+                    </div>
+
 
                     <div class="confirm-section">
                         <form action="send_sms.php" method="post">

@@ -80,6 +80,7 @@ body
 
 .confirm-section{
     display: block;
+    margin-top: 5%;
     padding-top: 5%;
     padding-left: 3%;
     margin-bottom: 12%;
@@ -98,7 +99,7 @@ body
 }
 
 .tab button {
-    height: 3%;
+    height: 80px;
     width: 28.4%;
     font-size: 20px;
     margin-right: -0.5%;
@@ -141,10 +142,16 @@ label {
     font: .9rem 'Fira Sans', sans-serif;
 }
 
-.iframe{
-    width:100%;
+iframe{
+    width: 650px;
     border:none;
-    position: absolute;
+    display: inline-block;
     height:100%;
+}
+
+.iframe-section{
+    margin-bottom: 5%;
+    display: block;
+    height: 100%;
 }
 
